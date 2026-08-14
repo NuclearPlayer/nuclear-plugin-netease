@@ -55,7 +55,7 @@ export class NeteaseClient {
     return data.result.albums ?? [];
   }
 
-  async getArtistDetail(artistId: number): Promise<NeteaseArtistDetailResult> {
+  async getArtistDetail(artistId: string): Promise<NeteaseArtistDetailResult> {
     const data = await this.request<NeteaseArtistDetailResult>(
       `/api/artist/${artistId}`,
     );
@@ -63,7 +63,7 @@ export class NeteaseClient {
     return { artist: data.artist, hotSongs: freeSongs };
   }
 
-  async getArtistAlbums(artistId: number): Promise<NeteaseArtistAlbum[]> {
+  async getArtistAlbums(artistId: string): Promise<NeteaseArtistAlbum[]> {
     const pageSize = 50;
     const albums: NeteaseArtistAlbum[] = [];
     let offset = 0;
@@ -82,7 +82,7 @@ export class NeteaseClient {
     return albums;
   }
 
-  async getAlbumDetail(albumId: number): Promise<NeteaseAlbumDetailResult> {
+  async getAlbumDetail(albumId: string): Promise<NeteaseAlbumDetailResult> {
     const data = await this.request<NeteaseAlbumDetailResult>(
       `/api/v1/album/${albumId}`,
     );
