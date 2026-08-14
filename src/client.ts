@@ -69,7 +69,7 @@ export class NeteaseClient {
     let offset = 0;
     let hasMore = true;
 
-    while (hasMore) {
+    while (hasMore && albums.length < config.maxArtistAlbums) {
       const data = await this.request<NeteaseArtistAlbumsResult>(
         `/api/artist/albums/${artistId}`,
         { limit: pageSize, offset },
@@ -79,7 +79,7 @@ export class NeteaseClient {
       offset += pageSize;
     }
 
-    return albums;
+    return albums.slice(0, config.maxArtistAlbums);
   }
 
   async getAlbumDetail(albumId: string): Promise<NeteaseAlbumDetailResult> {

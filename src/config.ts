@@ -7,4 +7,5 @@ export const config = {
   defaultSearchLimit: 15,
   streamingSearchLimit: 5,
   artistCacheTtlMs: 30_000,
+  maxArtistAlbums: 200,
 } as const;
