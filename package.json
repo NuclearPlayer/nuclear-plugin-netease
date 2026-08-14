@@ -1,0 +1,24 @@
+{
+  "name": "nuclear-plugin-netease",
+  "version": "0.1.0",
+  "description": "NetEase Cloud Music streaming and metadata provider for Nuclear",
+  "author": "nukeop",
+  "license": "AGPL-3.0-only",
+  "main": "src/index.ts",
+  "type": "module",
+  "nuclear": {
+    "displayName": "NetEase Cloud Music",
+    "categories": [
+      "metadata",
+      "streaming"
+    ],
+    "icon": {
+      "type": "link",
+      "link": "https://upload.wikimedia.org/wikipedia/en/7/72/NetEase_Music_icon.png"
+    },
+    "permissions": []
+  },
+  "dependencies": {
+    "@nuclearplayer/plugin-sdk": "^2.0.0"
+  }
+}
