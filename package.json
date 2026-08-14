@@ -1,6 +1,6 @@
 {
   "name": "nuclear-plugin-netease",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "NetEase Cloud Music streaming and metadata provider for Nuclear",
   "author": "nukeop",
   "license": "AGPL-3.0-only",
